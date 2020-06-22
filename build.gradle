@@ -28,7 +28,7 @@ test {
 }
 
 String dockerHubUsernameProperty = findProperty('dockerHubUsername') ?: 'shivam61'
-String imageName = "${dockerHubUsernameProperty}/HelloWorldDockerApp:$version"
+String imageName = "${dockerHubUsernameProperty}/helloworld-dockerapp:$version"
 
 docker {
     name imageName
@@ -39,7 +39,7 @@ docker {
 dockerRun {
     name project.name
     image imageName
-    ports '8080:8080'
+    ports '8181:8181'
     clean true
 }
 
