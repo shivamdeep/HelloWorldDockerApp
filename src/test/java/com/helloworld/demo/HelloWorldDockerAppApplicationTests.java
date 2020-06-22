@@ -14,7 +14,7 @@ class HelloWorldDockerAppApplicationTests {
 	
 	@Test
 	void test() {
-		assertThat(false);
+		assertThat(true);
 	}
 
 }
