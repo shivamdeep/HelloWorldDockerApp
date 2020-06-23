@@ -46,7 +46,7 @@ dockerRun {
 import com.amazonaws.services.cloudformation.model.Capability
 
 aws {
-    region = findProperty('region') ?: 'us-east-1'
+    region = findProperty('region') ?: 'us-east-2'
 }
 
 cloudFormation {
@@ -54,6 +54,7 @@ cloudFormation {
     stackParams([
             SubnetID: findProperty('subnetId') ?: '',
             ServiceName: project.name,
+			Region: findProperty('region') ?: 'us-east-2'
             ServiceVersion: project.version,
             DockerHubUsername: dockerHubUsernameProperty
     ])
