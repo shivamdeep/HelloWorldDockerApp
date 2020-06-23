@@ -54,7 +54,6 @@ cloudFormation {
     stackParams([
             SubnetID: findProperty('subnetId') ?: '',
             ServiceName: project.name,
-			Region: findProperty('region') ?: 'us-east-2',
             ServiceVersion: project.version,
             DockerHubUsername: dockerHubUsernameProperty
     ])
